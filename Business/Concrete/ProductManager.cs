@@ -32,6 +32,7 @@ namespace Business.Concrete
         public IDataResult<List<Product>> GetAll()
         {
             return new SuccessDataResult<List<Product>> (_productDal.GetAll());
+            
         }
 
         public IDataResult<List<Product>> GetAllByCategoryId(int id)
