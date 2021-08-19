@@ -1,6 +1,4 @@
 ﻿using Business.Abstract;
-using Business.Concrete;
-using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,44 +11,46 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class RentalsController : ControllerBase
     {
-        IProductService _productService;
+        IRentalService _rentalService;
 
-        public ProductsController(IProductService productService)
+        public RentalsController(IRentalService rentalService)
         {
-            _productService = productService;
+            _rentalService = rentalService;
         }
-
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            var result = _productService.GetAll();
+            var result = _rentalService.GetAll();
             if (result.Success)
             {
                 return Ok(result.Data);
             }
             return BadRequest(result.Data);
+
         }
         [HttpGet("getbyid")]
         public IActionResult GetById(int id)
         {
-            var result = _productService.GetById(id);
+            var result = _rentalService.Get(id);
             if (result.Success)
             {
                 return Ok(result);
             }
             return BadRequest(result);
+
         }
-        [HttpGet("add")]
-        public IActionResult Add(Product product)
+        [HttpPost("add")]
+        public IActionResult Add(Rental rental)
         {
-            var result = _productService.Add(product);
+            var result = _rentalService.Add(rental);
             if (result.Success)
             {
                 return Ok(result);
             }
             return BadRequest(result);
+
         }
     }
 }
