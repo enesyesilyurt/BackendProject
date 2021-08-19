@@ -6,16 +6,16 @@ namespace Core.Utilities.Results
 {
     public class Result : IResult
     {
-        public Result(bool success,string message):this(success)
+        public Result(bool succes,string messages):this(succes)
         {
-            Message = message;
+            Messages = messages;
         }
-        public Result(bool success)
+        public Result(bool succes)
         {
-            Success = success;
+            Success = succes;
         }
         public bool Success { get; }
 
-        public string Message { get; }
+        public string Messages { get; }
     }
 }
