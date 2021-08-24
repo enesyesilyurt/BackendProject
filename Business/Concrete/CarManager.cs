@@ -8,6 +8,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using Entities.DTOs;
 using Core.Utilities.Results;
+using Core.Aspects.Autofac.Caching;
 
 namespace Business.Concrete
 {
@@ -19,7 +20,7 @@ namespace Business.Concrete
         {
             _carDal = carDal;
         }
-
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Add(Car car)
         {
             if (car.DailyPrice > 0 && car.CarName.Length > 2)
@@ -41,7 +42,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_carDal.GetAll());
         }
 
-
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Update(Car car)
         {
             _carDal.Update(car);
