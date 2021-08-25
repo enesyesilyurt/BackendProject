@@ -36,21 +36,6 @@ namespace Business.Concrete
             return new SuccessDataResult<User>(user, Messages.UserRegistered);
         }
 
-        public IDataResult<User> Login(UserForLoginDto userForLoginDto)
-        {
-            var userToCheck = _userService.GetByMail(userForLoginDto.Email);
-            if (userToCheck == null)
-            {
-                return new ErrorDataResult<User>(Messages.UserNotFound);
-            }
-
-            if (!HashingHelper.VerifyPasswordHash(userForLoginDto.Password, userToCheck.PasswordHash, userToCheck.PasswordSalt))
-            {
-                return new ErrorDataResult<User>(Messages.PasswordError);
-            }
-
-            return new SuccessDataResult<User>(userToCheck, Messages.SuccessfulLogin);
-        }
 
         public IResult UserExists(string email)
         {
@@ -64,8 +49,24 @@ namespace Business.Concrete
         public IDataResult<AccessToken> CreateAccessToken(User user)
         {
             var claims = _userService.GetClaims(user);
-            var accessToken = _tokenHelper.CreateToken(user, claims);
+            var accessToken = _tokenHelper.CreateToken(user, claims.Data);
             return new SuccessDataResult<AccessToken>(accessToken, Messages.AccessTokenCreated);
+        }
+
+        IDataResult<User> IAuthService.Login(UserForLoginDto userForLoginDto)
+        {
+            var userToCheck = _userService.GetByMail(userForLoginDto.Email);
+            if (userToCheck == null)
+            {
+                return new ErrorDataResult<User>(userToCheck.Data);
+            }
+
+            if (!HashingHelper.VerifyPasswordHash(userForLoginDto.Password, userToCheck.Data.PasswordHash, userToCheck.Data.PasswordSalt))
+            {
+                return new ErrorDataResult<User>(userToCheck.Data);
+            }
+
+            return new SuccessDataResult<User>(userToCheck.Data);
         }
     }
 }
