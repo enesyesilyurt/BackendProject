@@ -146,3 +146,7 @@ C:\Users\enes_\Documents\BackendProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.cs
 C:\Users\enes_\Documents\BackendProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.dll
 C:\Users\enes_\Documents\BackendProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.pdb
 C:\Users\enes_\Documents\BackendProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.genruntimeconfig.cache
+C:\Users\enes_\Documents\BackendProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\enes_\Documents\BackendProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\enes_\Documents\BackendProject\WebAPI\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\enes_\Documents\BackendProject\WebAPI\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll

@@ -129,3 +129,11 @@ C:\Users\enes_\Documents\BackendProject\ConsoleUI\obj\Debug\netcoreapp3.1\Consol
 C:\Users\enes_\Documents\BackendProject\ConsoleUI\obj\Debug\netcoreapp3.1\ConsoleUI.dll
 C:\Users\enes_\Documents\BackendProject\ConsoleUI\obj\Debug\netcoreapp3.1\ConsoleUI.pdb
 C:\Users\enes_\Documents\BackendProject\ConsoleUI\obj\Debug\netcoreapp3.1\ConsoleUI.genruntimeconfig.cache
+C:\Users\enes_\Documents\BackendProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.dll
+C:\Users\enes_\Documents\BackendProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\enes_\Documents\BackendProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\enes_\Documents\BackendProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\enes_\Documents\BackendProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.ObjectPool.dll
+C:\Users\enes_\Documents\BackendProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.Net.Http.Headers.dll
+C:\Users\enes_\Documents\BackendProject\ConsoleUI\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\enes_\Documents\BackendProject\ConsoleUI\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
